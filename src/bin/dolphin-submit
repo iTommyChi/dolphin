@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+DOLPHIN_HOME="$(cd "`dirname "$0"`"/..; pwd)"
+
+# disable randomized hash for string in Python 3.3+
+export PYTHONHASHSEED=0
+
+exec "$DOLPHIN__HOME"/bin/dolphin-class cn.duan.dolphin.deploy.DolphinSubmit "$@"
